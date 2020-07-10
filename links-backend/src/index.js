@@ -1,8 +1,14 @@
 //Inicializa o servidor 
 const express = require('express'); 
 
+//importar
+const authController = require('./controllers/auth');
+
 //Inicializa essa aplicação
 const app = express();
+
+// Mostrar as rotas "novas" e informar para o express
+app.use('/auth', authController);
 
 //Definir uma rota
 app.get('/', (req, res) => { //Executa a função quando chegar no endereço.
