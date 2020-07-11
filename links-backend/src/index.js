@@ -8,6 +8,7 @@ const authController = require('./controllers/auth');
 const app = express();
 
 // Mostrar as rotas "novas" e informar para o express
+// /auth/sign-in && /auth/sign-up
 app.use('/auth', authController);
 
 //Definir uma rota
