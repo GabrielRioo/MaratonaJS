@@ -15,6 +15,8 @@
    * `npx sequelize-cli init:config` - banco para desenvolvimento, teste, e produçao.
    * `npm install --save dotenv` - cria uma pasta .env para por informaçoes confidenciais do Banco de Dados.
    * `npm install --save mysql2` - driver
+   * `npm install --save bcrypt` - criptografar senhas no banco de dados
+   
    
 ---
 
