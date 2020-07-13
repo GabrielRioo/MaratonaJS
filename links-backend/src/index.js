@@ -9,6 +9,11 @@ const authController = require('./controllers/auth');
 //Inicializa essa aplicação
 const app = express();
 
+// recebe os dados em json
+app.use(express.json()); 
+// pega o body da requisição
+app.use(express.urlencoded({ extended: false }));
+
 // Mostrar as rotas "novas" e informar para o express
 // /auth/sign-in && /auth/sign-up
 app.use('/auth', authController);

@@ -14,21 +14,24 @@ router.get('/sign-in', (req, res) => {
 })
 
 // /auth/sign-up
-router.get('/sign-up', async(req, res) => {
+router.get('/sign-up', async (req, res) => {
 
-    const email = 'gabriel@gmail.com';
-    const password = '123456';
+    const { email, password } = req.body;
+
+    // Verificar se o email nao existe no banco
+    const account = await Account.findOne({ where: { email } });
+    if (account) return res.json('Account already exists');
 
     // salt - criptografa normalmente mas mistura com alguma outra string definida
     // ex: const salt = 'sdf2f23tjbgdi'
     // rounds - quantas vezes vai rodar o metodo de criptografia
     const hash = bcrypt.hashSync(password, saltRounds);
-    
-    //cria a tabela no banco de dados
-    const result = await Account.create({ email, password: hash });
-    
-    
-    return res.json(result);
+
+    // Cria uma nova conta no Banco de dados.
+    const newAccount = await Account.create({ email, password: hash });
+
+
+    return res.json({newAccount});
 })
 
 //exportar
