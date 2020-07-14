@@ -5,6 +5,8 @@
 
 * Como organizar as pastas em projetos express:
    * Por tudo dentro da pasta `src`
+   * Plugin: REST Client
+   * **Biblioteca de Atutenticação:** hapi joi
    
 * `npm install --save nodemon` - reinicializa o servidor automaticamente(sem precisar parar a execução e executar novamente)
    * `npm start` - Inicia o servidor com nodemon
@@ -16,7 +18,7 @@
    * `npm install --save dotenv` - cria uma pasta .env para por informaçoes confidenciais do Banco de Dados.
    * `npm install --save mysql2` - driver
    * `npm install --save bcrypt` - criptografar senhas no banco de dados
-   
+   * `npm install --save @hapi/joi` - biblioteca de autenticação
    
 ---
 
