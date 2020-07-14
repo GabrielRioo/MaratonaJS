@@ -1,0 +1,13 @@
+
+@baseUrl = http://localhost:3001
+### para n precisa repetir a url cada vez q pedir uma requisição
+@contentType = application/json
+
+### Create a Account
+GET {{baseUrl}}/auth/sign-up
+Content-Type: {{contentType}}
+
+{
+    "email": "gabriel6@gmail.com",
+    "password": "123456"
+}
