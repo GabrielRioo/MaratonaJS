@@ -18,9 +18,11 @@ router.get('/sign-up', async (req, res) => {
 
     const { email, password } = req.body;
 
+
+
     // Verificar se o email nao existe no banco
     const account = await Account.findOne({ where: { email } });
-    if (account) return res.json('Account already exists');
+    if (account) return res.jsonBadRequest(null, 'Account already exists');
 
     // salt - criptografa normalmente mas mistura com alguma outra string definida
     // ex: const salt = 'sdf2f23tjbgdi'
@@ -31,7 +33,7 @@ router.get('/sign-up', async (req, res) => {
     const newAccount = await Account.create({ email, password: hash });
 
 
-    return res.json({newAccount});
+    return res.jsonOK(newAccount, 'Account created');
 })
 
 //exportar
