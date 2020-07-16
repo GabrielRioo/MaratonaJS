@@ -39,5 +39,8 @@
 `});` <br>
 
 
-40 min
+---
 
+#### Conceitos JavaScript
+`<varName>.addEventListener('click', <functionName>);` - Ao clicar.
+`<varName>.textContent = 'Jogador 1: ' + <varName>;` - Muda o texto
