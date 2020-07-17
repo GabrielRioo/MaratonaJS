@@ -42,8 +42,25 @@
 ---
 
 #### Conceitos JavaScript
-`<varName>.addEventListener('click', <functionName>);` - Ao clicar.
-`<varName>.textContent = 'Jogador 1: ' + <varName>;` - Muda o texto
+`<varName>.addEventListener('click', <functionName>);` - Ao clicar. <br>
+`<varName>.textContent = 'Jogador 1: ' + <varName>;` - Muda o texto <br>
+`ment.createElement('p')` - Cria um novo paragrafo. <br>
+`.textContent = ' ' ` - Escreve um texto <br>
+`<script src="script.js" defer></script>` - defer - renderiza o HTML sempre que o JS for atingido <br>
+Funciona com **scripts externos** <br>
+O _"DOMContentLoaded_ funciona com **scripts internos**
+
+#### Eventos:
+`<varName>.addEventListener('click', <callFunction>)` - Ouve o clique do mouse <br>
+
+Quando o codigo HTML tiver pronto, tudo q estiver dentro desse metodo, é executado. <br>
+
+```
+document.addEventListener("DOMContentLoaded", function() {
+  ...
+});
+```
+
 
 #### Funções - metodos:
 ```
