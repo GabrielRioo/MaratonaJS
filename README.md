@@ -44,3 +44,71 @@
 #### Conceitos JavaScript
 `<varName>.addEventListener('click', <functionName>);` - Ao clicar.
 `<varName>.textContent = 'Jogador 1: ' + <varName>;` - Muda o texto
+
+#### Funções - metodos:
+```
+function multNumbers(x, y) {
+  let result = x * y;
+  return result
+}
+multNumbers(7, 5);
+```
+
+```
+let mult = function(x,y){
+  let result = x * y;
+  return result
+}
+mult(2,5);
+```
+
+```
+let objMult = {
+  func: function(x,y);
+    let result = x * y;
+    return result
+}
+objMult.func(4,2);
+```
+**Função aninhada:** tudo da função externa, a interna tem acesso.
+```
+function myName(val){
+  let name = 'Gabriel';
+  
+  function setName() {
+    console.log(name);
+  }
+  setName();
+}
+myName(1);
+```
+
+**Arrow Functions**
+```
+let sumArrow = (x,y) => {
+  return x + y;
+}
+sumArrow(3,4)
+```
+
+```
+let sumArrow = (x,y) => x + y {
+}
+sumArrow(3,4)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
