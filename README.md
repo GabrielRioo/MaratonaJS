@@ -63,6 +63,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 #### Funções - metodos:
+`.toLowerCase()` - poe as letras em minusculo <br>
+`.toUpperCase()` - poe as letras em maiuculo <br>
+`.replace('G', 'C')` - substitui a primeira letra G por C <br>
+`.toFixed(2)` - Mostra um float com 2 casas decimais. <br>
+`Math.round(Math.random() * 10)`- Numeros aleatorio entre 0 e 10 <br>
+`alert()` - mensagem pop up (apenas ok) <br>
+`confirm()` - mensagem pop up (confirmar ou cancelar) <br>
+`console.log()` <br>
+`console.error()` <br>
+`console.warm()` <br>
+`console.info()` <br>
 ```
 function multNumbers(x, y) {
   let result = x * y;
